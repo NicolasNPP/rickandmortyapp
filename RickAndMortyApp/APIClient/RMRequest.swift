@@ -11,13 +11,11 @@ import Foundation
 final class RMRequest {
     
     private struct Constant {
-        static let baseUrl = "https://rickandmortyapp.com/api"
+        static let baseUrl = "https://rickandmortyapi.com/api"
     }
     
     private let endpoint: RMEndpoint
-    
     private let pathComponents: Set<String>
-    
     private let queryParameters: [URLQueryItem]
     
     private var urlString: String {
@@ -42,10 +40,7 @@ final class RMRequest {
         
         return string
     }
-    
-    
-    
-    
+ 
     public var url: URL? {
         return URL(string: urlString)
     }
@@ -61,5 +56,4 @@ final class RMRequest {
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
     }
-    
 }
