@@ -18,7 +18,10 @@ final class RMService {
     /// -Parameters
     ///     -request: request instance
     ///     -completion: Callback with error or data
-    public func execute(_request : RMRequest, completion: @escaping () -> Void) {
+    public func execute<T: Codable>(
+        _request : RMRequest,
+        expecting type: T.Type,
+        completion: @escaping (Result<String, Error>) -> Void) {
         
     }
 }
